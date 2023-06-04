@@ -1,2 +1,2 @@
 # holbertonschool-higher_level_programming
-https://tse3.mm.bing.net/th?id=OIP.bFXcWtnrXP9AIRhyp-NKaAHaHa&pid=Api&P=0&h=180
+https://yt3.ggpht.com/a/AATXAJyzTkplShXKmbpF3lnZ_fg9MwbWOgxZIpm0BYVJ=s900-c-k-c0xffffffff-no-rj-mo
