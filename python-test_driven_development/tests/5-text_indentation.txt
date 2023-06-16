@@ -1,0 +1,53 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Print a text
+>>> text_indentation("Mi nombre es Valentina?")
+Mi nombre es Valentina?
+<BLANKLINE>
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+checking whit a positive int
+>>> text_indentation(2)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+checking whit a negative int
+>>> text_indentation(-2)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+checking whit a positive float
+>>> text_indentation(3.5)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+checking whit a negative float
+Traceback (most recent call last):
+TypeError: text must be a string
+
+checking whit a boolean
+>>> text_indentation(True)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation(10)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation('2')
+2
+
+>>> text_indentation("   \n")
+<BLANKLINE>
+
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+

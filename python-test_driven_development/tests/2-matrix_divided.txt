@@ -1,0 +1,59 @@
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+div = 3 - positive
+>>> matrix_divided([[2, 2, 3], [5, 5, 6]], 3)
+[[0.67, 0.67, 1.0], [1.67, 1.67, 2.0]]
+
+div = 3 - negative
+>>> matrix_divided([[2, 2, 3], [5, 5, 6]], 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+>>> matrix_divided([[2, 2, 3], [5, 5]], 2)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+>>> matrix_divided([], 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided([[],[]], 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided([[2, 2, 3], [5, 5]], "Hidalgo")
+Traceback (most recent call last):
+TypeError: div must be a number
+
+>>> matrix_divided([[2, 2, 3], [5, 5]], [3])
+Traceback (most recent call last):
+TypeError: div must be a number
+
+>>> matrix_divided([[-1, 3.1, 0], [78, -103.7, 54]], 9.2)
+[[-0.11, 0.34, 0.0], [8.48, -11.27, 5.87]]
+
+>>> matrix_divided([["Valentina", "Hidalgo"], [6, 7]], 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided([[3, 4], [6, 7]], -2)
+[[-1.5, -2.0], [-3.0, -3.5]]
+
+>>> matrix_divided([[3, 4]])
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+>>> matrix_divided()
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+>>> matrix_divided([[3, 9], [4, 5, 6]], 2)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+>>> matrix_divided([[3, 9, 4], [4, 5]], 2)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+>>> matrix_divided([[2, 3], [4, 5]], float('inf'))
+[[0.0, 0.0], [0.0, 0.0]]
