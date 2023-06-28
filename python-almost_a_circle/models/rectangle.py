@@ -16,27 +16,27 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
-    property
+    @property
     def width(self):
         """Get width of Rectangle"""
         return self.__width
 
-    property
+    @property
     def height(self):
         """Get height of Rectangle"""
         return self.__height
 
-    property
+    @property
     def x(self):
         """Get coordinate x of Rectangle"""
         return self.__x
 
-    property
+    @property
     def y(self):
         """Get cordinate y of Rectangle"""
         return self.__y
 
-    width.setter
+    @width.setter
     def width(self, value):
         """atribute width"""
         if type(value) is not int:
@@ -45,7 +45,7 @@ class Rectangle(Base):
             raise ValueError("width must be > 0")
         self.__width = value
 
-    height.setter
+    @height.setter
     def height(self, value):
         """atribute height"""
         if type(value) is not int:
@@ -54,7 +54,7 @@ class Rectangle(Base):
             raise ValueError("height must be > 0")
         self.__height = value
 
-    x.setter
+    @x.setter
     def x(self, value):
         """atribute x"""
         if type(value) is not int:
@@ -63,7 +63,7 @@ class Rectangle(Base):
             raise ValueError("x must be >= 0")
         self.__x = value
 
-    y.setter
+    @y.setter
     def y(self, value):
         """atribute y"""
         if type(value) is not int:

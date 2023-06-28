@@ -20,13 +20,13 @@ class Square(Rectangle):
         st = (f"[Square] ({self.id}) {self.x}/{self.y} - {self.__width}")
         return (st)
 
-    property
+    @property
     def size(self):
         """Get atribute size"""
 
         return self.__width
 
-    size.setter
+    @size.setter
     def size(self, value):
         """atribute size"""
 
