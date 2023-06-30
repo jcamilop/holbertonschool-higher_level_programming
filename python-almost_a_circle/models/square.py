@@ -1,72 +1,64 @@
 #!/usr/bin/python3
-"""Module square"""
-
-import json
-from models.base import Base
+"""class Square import class Rectangle"""
 from models.rectangle import Rectangle
 
 
+"""Create class Square"""
+
+
 class Square(Rectangle):
-    """class Square that inherits from Rectangle"""
+    """Create constructor for square"""
 
     def __init__(self, size, x=0, y=0, id=None):
-        """"""
-        self.size = size
         super().__init__(size, size, x, y, id)
 
+    """print constructor"""
+
     def __str__(self):
-        """String representation of Rectangle instance """
+        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
 
-        st = (f"[Square] ({self.id}) {self.x}/{self.y} - {self.__width}")
-        return (st)
-
+    """Getter for square"""
     @property
     def size(self):
-        """Get atribute size"""
+        return self.width
 
-        return self.__width
-
+    """setter for square"""
     @size.setter
     def size(self, value):
-        """atribute size"""
+        self.width = value
+        self.height = value
 
-        if type(value) is not int:
-            raise TypeError("width must be an integer")
-        if value <= 0:
-            raise ValueError("width must be > 0")
-        self.__width = value
-        self.__height = value
+    """Adding update function with arguments"""
 
     def update(self, *args, **kwargs):
-        """assigns an argument to each attribute
-        assigns a key/value argument to attributes"""
+        """print dimensions of the print rectangle"""
+        if len(args) > 0:
+            self.id = args[0]
+        if len(args) > 1:
+            self.size = args[1]
+        if len(args) > 2:
+            self.x = args[2]
+        if len(args) > 3:
+            self.y = args[3]
 
-        if args is not None and len(args) != 0:
-            if len(args) >= 1:
-                if type(args[0]) != int and args[0] is not None:
-                    raise TypeError("id must be an integer")
-                self.id = args[0]
-            if len(args) > 1:
-                self.size = args[1]
-            if len(args) > 2:
-                self.x = args[2]
-            if len(args) > 3:
-                self.y = args[3]
-
-        else:
+        if len(args) == 0 or len(kwargs) > 0:
             for key, value in kwargs.items():
                 if key == 'id':
-                    if type(value) is not int and value is not None:
-                        raise TypeError("id must be an integer")
                     self.id = value
-                if key == "size":
+                elif key == 'size':
                     self.size = value
-                if key == "x":
+                elif key == 'x':
                     self.x = value
-                if key == "y":
+                elif key == 'y':
                     self.y = value
 
+    """adding dictionary in the square"""
+
     def to_dictionary(self):
-        """Returns the dictionary representation of a Rectangle"""
-        dic_s = {"id": self.id, "size": self.size, "x": self.x, "y": self.y}
-        return (dic_s)
+        """create dictionary"""
+        return {
+            'id': self.id,
+            'x': self.x,
+            'size': self.size,
+            'y': self.y
+        }
